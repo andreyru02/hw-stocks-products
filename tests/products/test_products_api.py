@@ -13,4 +13,3 @@ def test_get_products(api_client, product_factory):
     assert product[0].id == resp_json.get('id')
     assert product[0].title == resp_json.get('title')
     assert 'Andrey' == 'Andrey'
-
