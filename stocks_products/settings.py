@@ -13,6 +13,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import django_heroku
 import os
+from dotenv import load_dotenv
+
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -76,13 +80,24 @@ WSGI_APPLICATION = 'stocks_products.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': os.getenv('DB_NAME', default='db'),
+#         'USER': os.getenv('DB_USER', default='postgres'),
+#         'PASSWORD': os.getenv('DB_PASSWORD', default='postgres'),
+#         'HOST': os.getenv('DB_HOST', default='127.0.0.1'),
+#         'PORT': int(os.getenv('DB_PORT', default=5432)),
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DB_NAME', default='db'),
-        'USER': os.getenv('DB_USER', default='postgres'),
-        'PASSWORD': os.getenv('DB_PASSWORD', default='postgres'),
-        'HOST': os.getenv('DB_HOST', default='localhost'),
+        'NAME': 'd6vjgmhs7p8hnn',
+        'USER': 'koqwiqjtpwcdds',
+        'PASSWORD': '09dc22f9d6df01bfa75a38a2ec519bdfbce31f96e90d3e9785f70f7ef3a8d299',
+        'HOST': 'ec2-52-210-120-210.eu-west-1.compute.amazonaws.com',
         'PORT': int(os.getenv('DB_PORT', default=5432)),
     }
 }

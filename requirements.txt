@@ -8,3 +8,4 @@ pytest-django
 flake8
 gunicorn
 model_bakery
+python-dotenv
