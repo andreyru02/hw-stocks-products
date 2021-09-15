@@ -1,8 +1,6 @@
 import pytest
 from django.urls import reverse
 
-from logistic.models import Product
-
 
 @pytest.mark.django_db
 def test_get_course(api_client, product_factory):
