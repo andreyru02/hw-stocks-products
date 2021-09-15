@@ -91,17 +91,6 @@ WSGI_APPLICATION = 'stocks_products.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd6vjgmhs7p8hnn',
-        'USER': 'koqwiqjtpwcdds',
-        'PASSWORD': '09dc22f9d6df01bfa75a38a2ec519bdfbce31f96e90d3e9785f70f7ef3a8d299',
-        'HOST': 'ec2-52-210-120-210.eu-west-1.compute.amazonaws.com',
-        'PORT': int(os.getenv('DB_PORT', default=5432)),
-    }
-}
-
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
