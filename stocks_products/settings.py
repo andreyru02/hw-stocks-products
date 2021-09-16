@@ -81,14 +81,20 @@ WSGI_APPLICATION = 'stocks_products.wsgi.application'
 db_from_env = dj_database_url.config(conn_max_age=500)
 
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': os.getenv('DB_NAME', default='db'),
+#         'USER': os.getenv('DB_USER', default='postgres'),
+#         'PASSWORD': os.getenv('DB_PASSWORD', default='postgres'),
+#         'HOST': os.getenv('DB_HOST', default='127.0.0.1'),
+#         'PORT': int(os.getenv('DB_PORT', default=5432)),
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.getenv('DB_NAME', default='db'),
-        'USER': os.getenv('DB_USER', default='postgres'),
-        'PASSWORD': os.getenv('DB_PASSWORD', default='postgres'),
-        'HOST': os.getenv('DB_HOST', default='127.0.0.1'),
-        'PORT': int(os.getenv('DB_PORT', default=5432)),
     }
 }
 
