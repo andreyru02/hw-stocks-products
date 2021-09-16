@@ -80,16 +80,16 @@ WSGI_APPLICATION = 'stocks_products.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': os.getenv('DB_NAME', default='db'),
-#         'USER': os.getenv('DB_USER', default='postgres'),
-#         'PASSWORD': os.getenv('DB_PASSWORD', default='postgres'),
-#         'HOST': os.getenv('DB_HOST', default='127.0.0.1'),
-#         'PORT': int(os.getenv('DB_PORT', default=5432)),
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.getenv('DB_NAME', default='db'),
+        'USER': os.getenv('DB_USER', default='postgres'),
+        'PASSWORD': os.getenv('DB_PASSWORD', default='postgres'),
+        'HOST': os.getenv('DB_HOST', default='127.0.0.1'),
+        'PORT': int(os.getenv('DB_PORT', default=5432)),
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
